@@ -13,8 +13,8 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 # Reading in and Cleaning the Data
-happiness_2021 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/world-happiness-report-2021.csv')
-happiness_2005 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/world-happiness-report.csv')
+happiness_2021 = pd.read_csv('world-happiness-report-2021.csv')
+happiness_2005 = pd.read_csv('world-happiness-report.csv')
 countries_dict = [country for country in happiness_2005
                 ["Country name"].unique() if country in happiness_2021["Country name"].values]
 happiness_2005 = happiness_2005.loc[happiness_2005["Country name"].isin(countries_dict)].reset_index(drop=True)
@@ -30,7 +30,7 @@ regional_dict = {k:v for k,v in zip(happiness_2021["Country name"], happiness_20
 regional_dict.update({'Congo':'Sub-Saharan Africa'})
 happiness["Regional indicator"] = happiness["Country name"].replace(regional_dict)
 happiness.drop(["Positive affect","Negative affect"], axis = 1, inplace = True)
-happiness_2022 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/2022.csv')
+happiness_2022 = pd.read_csv('2022.csv')
 happiness_2022.columns = happiness_2022.columns.str.replace('Explained by: ', '')
 happiness_2022_replace = {'Country': 'Country name','Happiness score':'Life Ladder',
                         'GDP per capita': 'Log GDP per capita',
@@ -99,9 +99,7 @@ st.dataframe(happiness)
 st.header('Data Cleaning')
 st.markdown('To start off, the most important thing to do is make sure that our data is fair and that it is a clear representation of what we are going to explore, which is the Russo - Ukrainian war. So for extra columns or rows that are unneeded, false, and unclear, it should either be changed or taken away from the data in order for us to analyze the data easier.')
 st.markdown('Below, first take a look at our datasets that we are going to, first, join together then clean and use. This dataset ranges from 2005 to 2022. With this amount of data, it would be easier for us to analyze how happy or unhappy either the Ukrainians or the Russians are and how it is effected and affects world events.')
-#happiness_2021 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/world-happiness-report-2021.csv')
-#happiness_2005 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/world-happiness-report.csv')
-#happiness_2022 = pd.read_csv('/Users/Maggie/Desktop/Maggie - school /DataScience/2022.csv')
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown('2005-2020')
@@ -122,29 +120,6 @@ st.markdown("Let's first ")
 code = '''def hello():
      print("Hello, Streamlit!")'''
 st.code(code, language='python')
-
-
-
-
-
-
-
-###### EXPLAIN VARIABLES#####
-####
-####
-####HFJHGERWEFJBDJFEOWDKPFBJNGIEFJOKPWDBNIGEHUOFKPWNDBJEOUFKPWWWWWWWW
-####
-####
-####
-
-
-    
-
-
-
-
-
-
 
 ##################################Graphs for the General World##############################
 st.header('Plots and Graphs for the General World')

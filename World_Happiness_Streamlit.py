@@ -456,6 +456,4 @@ if selected == 'Data Analysis':
 if selected == 'Conclusion':
     st.title('Conclusion')    
     st.markdown("Now that you have reached the end of this, have you formed your own opinion on whether the Russo- Ukrainian war has something to do with the happiness of Russia and Ukraine?")
-	image_5 = Image.open('2876tf22.jpg')
-	st.image(image_5, use_column_width = 'auto')
 			     

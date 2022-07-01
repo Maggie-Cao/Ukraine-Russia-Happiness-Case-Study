@@ -16,7 +16,7 @@ from streamlit_option_menu import option_menu
 st.set_page_config(layout="wide")
 
 # Reading in and Cleaning the Data
-happiness_2021 = pd.read_csv('DataScience/world-happiness-report-2021.csv')
+happiness_2021 = pd.read_csv('world-happiness-report-2021.csv')
 happiness_2005 = pd.read_csv('world-happiness-report.csv')
 countries_dict = [country for country in happiness_2005
                 ["Country name"].unique() if country in happiness_2021["Country name"].values]

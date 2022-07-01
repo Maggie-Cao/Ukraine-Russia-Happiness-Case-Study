@@ -148,7 +148,7 @@ if selected == 'Background Information':
     st.markdown("In what way does Putins see Ukraine? Well, after the Soviet Union collapsed in 1991, Ukraine gained its independence. Putin believes Ukrainan and Russia peopel are actually of one people, and he doesn't accept that Ukraine is a sovereign state. He beleives that Ukraine is just a sort of 'anti-Russia project'. He accuses the countries in NATO, without proof, that they are trying to threaten 'our historic future as a nation'. Also, they accuse NATO on trying to wage proxy war on Crimea according to BBC Bitesize.")
     st.markdown("So far we have mentioned NATO many times, but what is Putin's problem with NATO?")
     st.markdown("This has to start way back to the time that WWII had ended. In 1949, NATO was created as the North Atlantic Treaty Organization, a military group that seeked defence and security as a whole group: trying to prevent something like WWII from happening again. Since then, NATO has been spreading its influence throughout Europe and also North America. Currently 30 countries had already joined NATO. If we observe the world map below , we can see that NATO's expansion has reached Russia, with Ukraine just in between NATO's influence and RUssia. ")
-    image_3 = Image.open('/Users/Maggie/Desktop/Maggie - school /DataScience/NATO Influence.png')
+    image_3 = Image.open('NATO Influence.png')
     st.image(image_3, caption = "This image depicts NATO's influence in Europe till 2016.",width = 800)
     st.markdown("Russia in some ways is scared and afraid of NATO's influence. Many of the world powers like UK and US are in it, and militarily speaking, could pose a huge threat to Russia if it is standing right next to Russia. If Ukraine is taken and is part of NATO, there will be 'wall' between NATO and Russia; Russia thinks of Ukraine as a buffer zone between Russia and NATO. Putin wants NATO to reverse its invasions and turn the clock back to 1997. Putin says that NATO promised not to expand eastward but did so anyways. However, this may be a false claim since the instance was before the Soviet collapse in 1991. Moreover, the promise was made to then Soviet President Mikhail Gorbachev, when they discussed about NATO's expansion eastward but only in the context of East Germany(When Germnay was still seperated into East and West Germany).")
     st.markdown("What may be Putin/Russia's goal in this?")
@@ -167,6 +167,7 @@ if selected == 'Data Cleaning':
     st.title('Data Cleaning')
     st.markdown('To start off, the most important thing to do is make sure that our data is fair and that it is a clear representation of what we are going to explore, which is the Russo - Ukrainian war. So for extra columns or rows that are unneeded, false, and unclear, it should either be changed or taken away from the data in order for us to analyze the data easier.')
     st.markdown('Below, first take a look at our datasets that we are going to, first, join together then clean and use. This dataset ranges from 2005 to 2022. With this amount of data, it would be easier for us to analyze how happy or unhappy either the Ukrainians or the Russians are and how it is effected and affects world events.')
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown('2005-2020')
         st.dataframe(happiness_2005.columns)
